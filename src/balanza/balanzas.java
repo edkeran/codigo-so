@@ -157,8 +157,15 @@ public class balanzas extends javax.swing.JFrame {
             
             //LLAMAMOS A LA CLASE DE COMBINACIONES
             Combinar comb=new Combinar(lista);
-            System.out.println(comb.Ar());
-        
+            String vect=comb.Ar();
+            //SPLIT
+            String[] array=comb.Ar().split("\n",-1);  
+            //REOCRRER SPLTI para quitar repetidos
+            int aa=array.length;
+            for(int j=0; j <aa; j++){
+                
+            }
+            
         }else{
             JOptionPane.showMessageDialog(this, "No puede estar vacio el campo");
         }
@@ -181,7 +188,12 @@ public class balanzas extends javax.swing.JFrame {
            }
        }
         return true;
-    } 
+    }
+    
+    
+    private void eliminar_redundancia(String [] data){
+        
+    }
     
     /**
      * @param args the command line arguments
